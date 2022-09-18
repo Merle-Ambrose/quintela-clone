@@ -94,7 +94,7 @@ function App() {
                 </div>
                 <p>© 2022 Quintela Group LLC. 7722 Oak Moss Dr, Spring, TX 77379 · (844) 428-2924 · <a href="mailto:hello@quintela.io">hello@quintela.io</a></p>
                 <p><a href="/no-privacy-policy-on-this-site">Privacy Policy</a> · <a href="/no-cookie-policy-on-this-site">Cookie Policy</a></p>
-                <p><a href="www.polinatik.com">By: Polina Tikhomirova</a></p>
+                <p><a href="www.polinatik.com">Website Clone By: Polina Tikhomirova</a></p>
               </div>
             </div>
           </div>
