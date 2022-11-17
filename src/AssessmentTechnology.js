@@ -1,5 +1,7 @@
 import React from 'react';
 import ListPoint from './utils/ListPoint';
+import SmallQuote from './utils/SmallQuote';
+import SystemIntegrations from './utils/SystemIntegrations';
 
 function AssessmentTechnology() {
   return (
@@ -39,28 +41,11 @@ function AssessmentTechnology() {
                 <ListPoint url="/contact-us" img="./img/listpoint/tracking.png" altImgText="Two people picking between three candidates." heading="Tracking Completions" desc="Eliminate spreadsheets and mail merge processes. Check participants progress through a dashboard. Improve participant experience with consistent communication. Access both custom reports and vendor reports quickly." isImgOnLeft={true}/>
                 <ListPoint url="/contact-us" img="./img/listpoint/reports.png" altImgText="Magnifying a person's profile." heading="Accessing Reports" desc="Streamline multiple test results into a single report. Customize output to your unique competencies. Dynamically adjust text based on thresholds. Add interview questions or development tips."/>
             
-                <h1 className="text-center" id="integrationCompanies">Systems Integrations</h1>
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <img src="./img/companies/Success.png" alt="Success Factors Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/AON.png" alt="AON Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/Workday.png" alt="Workday Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/IBM.png" alt="IBM Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/Oracle.png" alt="Oracle Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/PeopleSoft.png" alt="PeopleSoft Company Logo" className="col integrationCompaniesImg"/>
-                    </div>
-                </div>
+                <SystemIntegrations/>
             </div>
         </div>
         
-
-        <div className="container">
-            <div className="text-center" id="assessmentTechnologyQuote">
-                <p id="digitalInterviewQuoteDesc">"With their unique blend of I-O and IT expertise, the Quintela Group helped us streamline our multiple assessment processes and competency reporting capabilities. The teams outstanding consulting and customer service focus allowed us to replace an outdated and manual system, freeing up our time to focus on more strategic tasks."</p>
-                <p id="digitalInterviewQuoteTitle">HR Director Organizational Development, PhD</p>
-                <p id="digitalInterviewQuoteCompany">Fortune 500 Big Box Retailer</p>
-            </div>
-        </div>
+        <SmallQuote desc='"With their unique blend of I-O and IT expertise, the Quintela Group helped us streamline our multiple assessment processes and competency reporting capabilities. The teams outstanding consulting and customer service focus allowed us to replace an outdated and manual system, freeing up our time to focus on more strategic tasks."' title="HR Director Organizational Development, PhD" company="Fortune 500 Big Box Retailer" />
     </>
   );
 }

@@ -3,18 +3,20 @@ import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 import './css/App.css';
 import { navbarToggle, onLoadNav } from './CheckNavbarToggle';
 
+import React, { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Home';
-import InterviewGuide from './InterviewGuide';
-import AssessmentTechnology from './AssessmentTechnology';
-import CompetencyModel from './CompetencyModel';
-import PsychobabbleZone from './PsychobabbleZone';
-import HRDiverse from './articles/HRDiverse';
-import ReducingDiscrimination from './articles/ReducingDiscrimination';
-import DigitalInterview from './articles/DigitalInterview';
-import ProInterview from './articles/ProInterview';
 import ErrorPage from './ErrorPage';
-import Contact from './Contact';
+import Loader from './Loader';
+const Home = React.lazy(() => import('./Home'));
+const InterviewGuide = React.lazy(() => import('./InterviewGuide'));
+const AssessmentTechnology = React.lazy(() => import('./AssessmentTechnology'));
+const CompetencyModel = React.lazy(() => import('./CompetencyModel'));
+const PsychobabbleZone = React.lazy(() => import('./PsychobabbleZone'));
+const Contact = React.lazy(() => import('./Contact'));
+const HRDiverse = React.lazy(() => import('./articles/HRDiverse'));
+const ReducingDiscrimination = React.lazy(() => import('./articles/ReducingDiscrimination'));
+const DigitalInterview = React.lazy(() => import('./articles/DigitalInterview'));
+const ProInterview = React.lazy(() => import('./articles/ProInterview'));
 
 function App() {
   return (
@@ -52,21 +54,24 @@ function App() {
       </nav>
 
       {/* Content of webpage */}
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route path="/digital-online-interview-builder" element={<InterviewGuide/>}/>
-          <Route path="/assessments" element={<AssessmentTechnology/>}/>
-          <Route path="/competency-model-library" element={<CompetencyModel/>}/>
-          <Route path="/psychobabble-free-zone" element={<PsychobabbleZone/>}/>
-          <Route path="/articles/how-diverse-are-hr-vendor-executive-teams" element={<HRDiverse/>}/>
-          <Route path="/articles/reducing-discrimination-with-digital-interview-guides" element={<ReducingDiscrimination/>}/>
-          <Route path="/articles/the-two-ways-digital-interview-guides-keep-you-legally-compliant" element={<DigitalInterview/>}/>
-          <Route path="/articles/interview-like-a-pro-how-to-interview-candidates-with-confidence" element={<ProInterview/>}/>
-          <Route path="/contact-us" element={<Contact/>}/>
-          <Route path="*" element={<ErrorPage/>}/>
-        </Routes>
-      </BrowserRouter>
+      <Suspense fallback={<Loader/>}>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Home/>}/>
+            <Route path="/digital-online-interview-builder" element={<InterviewGuide/>}/>
+            <Route path="/assessments" element={<AssessmentTechnology/>}/>
+            <Route path="/competency-model-library" element={<CompetencyModel/>}/>
+            <Route path="/psychobabble-free-zone" element={<PsychobabbleZone/>}/>
+            <Route path="/articles/how-diverse-are-hr-vendor-executive-teams" element={<HRDiverse/>}/>
+            <Route path="/articles/reducing-discrimination-with-digital-interview-guides" element={<ReducingDiscrimination/>}/>
+            <Route path="/articles/the-two-ways-digital-interview-guides-keep-you-legally-compliant" element={<DigitalInterview/>}/>
+            <Route path="/articles/interview-like-a-pro-how-to-interview-candidates-with-confidence" element={<ProInterview/>}/>
+            <Route path="/contact-us" element={<Contact/>}/>
+            <Route path="*" element={<ErrorPage/>}/>
+          </Routes>
+        </BrowserRouter>
+      </Suspense>
+      
 
       {/* Footer! */}
       <footer className="text-center">

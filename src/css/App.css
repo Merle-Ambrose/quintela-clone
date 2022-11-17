@@ -580,17 +580,16 @@ footer p {
     background-image: url('../../public/img/bkgs/cmp.png');
 }
 
-.error {
+.misc {
     width: 50%;
     padding-top: 50px;
     color: #666666;
     padding-bottom: 500px;
 }
 
-.error h1 {
+.misc h1 {
     color: #333333;
 }
-
 
 #contactUsBkg {
     height: 380px;

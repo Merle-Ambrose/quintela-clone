@@ -1,5 +1,20 @@
 import React from 'react';
 import ListPoint from './utils/ListPoint';
+import SmallQuote from './utils/SmallQuote';
+
+function CompetencyBox({icon, title, desc}) {
+    return(
+        <div className="col">
+            <div className="modelBox d-flex flex-grow-1">
+                <div>
+                    <div className="modelboxIcon"><i className={icon}></i></div>
+                    <h5>{title}</h5>
+                    <p>{desc}</p>
+                </div>
+            </div>
+        </div>
+    );
+}
 
 function CompetencyModel() {
   return (
@@ -65,94 +80,22 @@ function CompetencyModel() {
             </div>
             
             <div className="row justify-content-center">
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-pen"></i></div>
-                            <h5>Job Analyses</h5>
-                            <p>Create job analysis surveys with your items/sections.  Send surveys to hundreds of job experts.  Receive a simple summary report with descriptive and aggregated ratings.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-bar-chart-line"></i></div>
-                            <h5>Job Profiles</h5>
-                            <p>Send a list of competencies to one or more job experts to select/rank critical competencies. Receive a simple summary report with descriptive and aggregated ratings.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-globe"></i></div>
-                            <h5>Psychometric Assessments</h5>
-                            <p>Assign test items to each competency & add scoring algorithms. Create an assessment by  combining competencies. Items are ordered/randomized.</p>
-                        </div>
-                    </div>
-                </div>
+                <CompetencyBox icon="bi bi-pen" title="Job Analyses" desc="Create job analysis surveys with your items/sections.  Send surveys to hundreds of job experts.  Receive a simple summary report with descriptive and aggregated ratings." />
+                <CompetencyBox icon="bi bi-bar-chart-line" title="Job Profiles" desc="Send a list of competencies to one or more job experts to select/rank critical competencies. Receive a simple summary report with descriptive and aggregated ratings." />
+                <CompetencyBox icon="bi bi-globe" title="Psychometric Assessments" desc="Assign test items to each competency & add scoring algorithms. Create an assessment by  combining competencies. Items are ordered/randomized." />
             </div>
 
             <div className="row justify-content-center">
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-journal-richtext"></i></div>
-                            <h5>360/180 Degree Surveys</h5>
-                            <p>Easily create surveys for one or multiple individuals to rate someone else. Receive a simple summary report with aggregated ratings.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-briefcase-fill"></i></div>
-                            <h5>Performance Surveys</h5>
-                            <p>Create an assessment that allows one person (usually a manager) to rate their direct report and/or dotted line individuals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-wallet2"></i></div>
-                            <h5>Interview Guides</h5>
-                            <p>Use a simple builder to create interview guides. Assign guides to hiring team. Print PDF/Word or enter notes and scores into eGuides.</p>
-                        </div>
-                    </div>
-                </div>
+                <CompetencyBox icon="bi bi-journal-richtext" title="360/180 Degree Surveys" desc="Easily create surveys for one or multiple individuals to rate someone else. Receive a simple summary report with aggregated ratings." />
+                <CompetencyBox icon="bi bi-briefcase-fill" title="Performance Surveys" desc="Create an assessment that allows one person (usually a manager) to rate their direct report and/or dotted line individuals." />
+                <CompetencyBox icon="bi bi-wallet2" title="Interview Guides" desc="Use a simple builder to create interview guides. Assign guides to hiring team. Print PDF/Word or enter notes and scores into eGuides." />
             </div>
 
             
             <div className="row justify-content-center">
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-envelope-paper"></i></div>
-                            <h5>Engagement Surveys</h5>
-                            <p>Create organizational and/or engagement surveys and send them to some or all of your employees. Utilize an interactive analytics dashboard that can be filtered by fields like department, gender, etc.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-tag"></i></div>
-                            <h5>Individual Assessments</h5>
-                            <p>Combine multiple assessments, typically designed to simulate a day in the life of the target role. Receive simple reports for the leaders who completed the assessment battery and/or for their coaches.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="modelBox d-flex flex-grow-1">
-                        <div>
-                            <div className="modelboxIcon"><i className="bi bi-calendar"></i></div>
-                            <h5>Assessment Centers</h5>
-                            <p>Create a multi-rater, multi-method assessment battery to be administered to a group of individuals, typical high potential employees. Capture all rater notes and scores online.</p>
-                        </div>
-                    </div>
-                </div>
+                <CompetencyBox icon="bi bi-envelope-paper" title="Engagement Surveys" desc="Create organizational and/or engagement surveys and send them to some or all of your employees. Utilize an interactive analytics dashboard that can be filtered by fields like department, gender, etc." />
+                <CompetencyBox icon="bi bi-tag" title="Individual Assessments" desc="Combine multiple assessments, typically designed to simulate a day in the life of the target role. Receive simple reports for the leaders who completed the assessment battery and/or for their coaches." />
+                <CompetencyBox icon="bi bi-calendar" title="Assessment Centers" desc="Create a multi-rater, multi-method assessment battery to be administered to a group of individuals, typical high potential employees. Capture all rater notes and scores online." />
             </div>
         </div>
         
@@ -175,15 +118,8 @@ function CompetencyModel() {
         </div>
 
 
-        <div>
-            <div className="container">
-                <div className="text-center" id="assessmentTechnologyQuote">
-                    <p id="digitalInterviewQuoteDesc">"We use Quintela for our interview guide system and assessment dashboard because they work with us to create what WE want/need rather than limiting us to off the shelf products that don’t fully meet our needs."</p>
-                    <p id="digitalInterviewQuoteTitle">Director Talent Management, PhD,</p>
-                    <p id="digitalInterviewQuoteCompany">Billion-Dollar Industrial Manufacturer</p>
-                </div>
-            </div>
-        </div>
+        <SmallQuote desc='"We use Quintela for our interview guide system and assessment dashboard because they work with us to create what WE want/need rather than limiting us to off the shelf products that don’t fully meet our needs."' title="Director Talent Management, PhD," company="Billion-Dollar Industrial Manufacturer" />
+        
     </>
   );
 }

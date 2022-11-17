@@ -1,5 +1,7 @@
 import React from 'react';
 import ListPoint from './utils/ListPoint';
+import SmallQuote from './utils/SmallQuote';
+import SystemIntegrations from './utils/SystemIntegrations';
 
 function InterviewGuide() {
   return (
@@ -47,29 +49,11 @@ function InterviewGuide() {
                 <ListPoint url="/contact-us" img="./img/listpoint/guide2.png" altImgText="Browser window showing a list of potential hires in the Quintela application." heading="Candidate Dashboard" desc="Make your interview guides available to recruiters and hiring managers. Advanced search and filtering features allow users to find their guides quickly. Restrict access to guides and edit features based on role." isImgOnLeft={true}/>
                 <ListPoint url="/contact-us" img="./img/listpoint/guide3.png" altImgText="Browser window showing an interviewer an interview guide in the Quintela application." heading="Digital Interview Guides" desc="Record objective ratings and interview notes digitally. Compare ratings and scores from multiple interviewers. Create database of notes/ratings for future analysis."/>
             
-                <h1 className="text-center" id="integrationCompanies">Systems Integrations</h1>
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <img src="./img/companies/Success.png" alt="Success Factors Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/AON.png" alt="AON Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/Workday.png" alt="Workday Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/IBM.png" alt="IBM Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/Oracle.png" alt="Oracle Company Logo" className="col integrationCompaniesImg"/>
-                        <img src="./img/companies/PeopleSoft.png" alt="PeopleSoft Company Logo" className="col integrationCompaniesImg"/>
-                    </div>
-                </div>
+                <SystemIntegrations/>
             </div>
         </div>
         
-
-        <div className="container">
-            <div className="text-center" id="digitalInterviewQuote">
-                <p id="digitalInterviewQuoteDesc">"In implementing an interview system to manage our competency-based interview guides and content, Quintela has proven that they are NOT the typical vendor. Their defensiveness-free attitude and adaptive approach allows us to address our unique requirements. The teams intelligent responsiveness and desire to solve our critical problems is refreshing."</p>
-                <p id="digitalInterviewQuoteTitle">Director of Selection & Assessment, PhD,</p>
-                <p id="digitalInterviewQuoteCompany">Fortune 500 Telecommunications Organization</p>
-            </div>
-        </div>
-
+        <SmallQuote desc='"In implementing an interview system to manage our competency-based interview guides and content, Quintela has proven that they are NOT the typical vendor. Their defensiveness-free attitude and adaptive approach allows us to address our unique requirements. The teams intelligent responsiveness and desire to solve our critical problems is refreshing."' title="Director of Selection & Assessment, PhD," company="Fortune 500 Telecommunications Organization" />
 
         <div className="exerpt" id="exerptDigitalInterview">
             <div className="container">

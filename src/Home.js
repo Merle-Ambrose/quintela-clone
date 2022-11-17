@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomerQuote from './utils/CustomerQuote';
 import ListPoint from './utils/ListPoint';
 
 function Home() {
@@ -13,26 +14,7 @@ function Home() {
                 <a href="/contact-us"><button type="button" className="introHeaderBtn" id="btnHomeSchedule">Schedule a Demo<div className="introHeaderBtnArrow"><i className="bi bi-caret-right"></i></div></button></a><br/>
                 <img src="./img/peopleWorking.png" alt="People surrounding a whiteboard choosing a potential hire."/>
             </div>
-            <div className="quoteFromCustomer">
-                <div className="container">
-                    <div className="row align-items-start justify-items-center">
-                    <div className="col-3 quoteLogo">
-                        <img src="./img/companies/SRHM.png" alt="SHRM Logo" id="srhmLogo"/>
-                    </div>
-                    <div className="col-8 quoteText">
-                        <p className="quote">
-                            Quintela is unique because they are selection science experts who build simple, easy-to-use HR technology. Using the Interview Guide Platform is highly intuitive—which is a must for HR professionals and hiring managers with decreased bandwidth and increased responsibilities. One of the best parts of the platform is it helps equip interviewers with practical tips on how to structure the interview, how to ask probing questions, what to look for and how to evaluate. It reduces much of the leg work typically required by recruiters to prepare interviewers, while providing candidates a more consistent and polished interview experience.
-                        </p>
-                        <p className="quoteName">
-                            Ashley Miller
-                        </p>
-                        <p className="quoteCredential">
-                            Director, Digital Products & Services, SHRM
-                        </p>
-                    </div>
-                    </div>
-                </div>
-            </div>
+            <CustomerQuote/>
 
             <div className="container listPoints" id="listPointsHome">
                 <ListPoint url="/digital-online-interview-builder" img="./img/listpoint/checkboxes.png" altImgText="A meeting held in front of a whiteboard." heading="Digital Interview Guides" desc="It’s time to move beyond static documents and digitize your interview guides. From updating an interview question to changing a competency title, our solution simplifies the time involved to make these changes and keeps all your interview data in one simple platform.  We are the only interview guide platform that was designed by selection scientists who hate clicking too many times."/>

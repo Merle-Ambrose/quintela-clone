@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import CustomerQuote from './utils/CustomerQuote';
 
 function validateEmail(email) {
   const res = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -86,26 +87,7 @@ function Contact() {
                     </form>
                 </div>
             </div>
-            <div className="quoteFromCustomer" id="contactUsQuote">
-                <div className="container">
-                    <div className="row align-items-start">
-                    <div className="col-sm-3 quoteLogo">
-                        <img src="./img/companies/SRHM.png" alt="SHRM Logo" id="srhmLogo"/>
-                    </div>
-                    <div className="col-sm-8 quoteText">
-                        <p className="quote">
-                            Quintela is unique because they are selection science experts who build simple, easy-to-use HR technology. Using the Interview Guide Platform is highly intuitive—which is a must for HR professionals and hiring managers with decreased bandwidth and increased responsibilities. One of the best parts of the platform is it helps equip interviewers with practical tips on how to structure the interview, how to ask probing questions, what to look for and how to evaluate. It reduces much of the leg work typically required by recruiters to prepare interviewers, while providing candidates a more consistent and polished interview experience.
-                        </p>
-                        <p className="quoteName">
-                            Ashley Miller
-                        </p>
-                        <p className="quoteCredential">
-                            Director, Digital Products & Services, SHRM
-                        </p>
-                    </div>
-                    </div>
-                </div>
-            </div>
+            <CustomerQuote/>
 
             <div className="exerpt">
                 <div className="container">
